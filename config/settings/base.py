@@ -49,14 +49,14 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    
+    'rest_framework',   
 )
 
-LOCAL_APS = (
-    
+LOCAL_APPS = (
+    'project.api',
 )
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -141,7 +141,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = str(ROOT_DIR('staticfiles'))
 
 STATICFILES_DIRS = (
-    str(APPS_DIR.path('static'))
+    str(APPS_DIR.path('static')),
 )
 
 STATICFILES_FINDERS = (
@@ -152,3 +152,7 @@ STATICFILES_FINDERS = (
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = str(APPS_DIR('media'))
+
+REST_FRAMEWORK = {
+    
+}
